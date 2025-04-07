@@ -1,30 +1,36 @@
-<div class="container-fluid" >
+<div class="container-fluid">
   <div class="row">
     <div class="col-3">
     </div>
-    <div class="col-6" >
+    <div class="col-6">
       <form>
         <h3>Scrivi una mail</h3>
         <div>
-          <label for="title" class="form-label">email:</label>
-          <input name="title"  class="form-control">
+          <label for="email">Email:</label>
+          <div>
+            <input id="email" name="email" #email>
+          </div>
         </div>
         <div>
-          <label for="link" class="form-label">oggetto:</label>
-          <input name="link"  class="form-control">
+          <label for="oggetto">Oggetto:</label>
+          <div>
+            <input id="oggetto" name="oggetto" #oggetto>
+          </div>
         </div>
         <div>
-          <label for="link" class="form-label">testo:</label>
-          <textarea name="link" class="form-control"></textarea>
+          <label for="testo">Testo:</label>
+          <div>
+            <input id="testo" name="testo" #testo>
+          </div>
         </div>
         <div>
-          <button class="mt-3">invia</button>
+          <button (click)="sendEmail(testo, oggetto, email)" class="mt-3">Invia</button>
         </div>
-      </form>  
+      </form>
       <div class="mt-5">
         <app-sent-mail></app-sent-mail>
       </div>
     </div>
-    <div class="col-3"></div>  
+    <div class="col-3"></div>
   </div>
 </div>
