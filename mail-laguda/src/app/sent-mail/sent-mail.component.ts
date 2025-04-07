@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
+import { Sentemail } from './sent-email.model';
 @Component({
   selector: 'app-sent-mail',
   imports: [],
@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './sent-mail.component.css'
 })
 export class SentMailComponent {
+  @Input() email:Sentemail;
+
+  constructor(){
+    this.email = new Sentemail("", "", "")
+  }
 
 }

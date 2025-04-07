@@ -28,7 +28,9 @@
         </div>
       </form>
       <div class="mt-5">
-        <app-sent-mail></app-sent-mail>
+        @for(mail of mails; track mail){
+          <app-sent-mail [email] = "mail"></app-sent-mail>
+        }
       </div>
     </div>
     <div class="col-3"></div>
