@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 import { Sentemail } from './sent-email.model';
 @Component({
   selector: 'app-sent-mail',
@@ -8,12 +8,24 @@ import { Sentemail } from './sent-email.model';
 })
 export class SentMailComponent {
   @Input() email:Sentemail;
+  //@HostBinding('attr.class') cssClass = 'bg-info-subtle';
   button_clicked = true
   constructor(){
     this.email = new Sentemail("", "", "")
   }
-
+  /*
+  isSpecialClicked: boolean = false
+  @HostBinding('class.bg-info') get isBlueBackground() {
+    return this.isSpecialClicked;
+  }
+  toggleSpecial() {
+    this.isSpecialClicked = !this.isSpecialClicked;
+    console.log(this.isSpecialClicked)
+  }
+  */
   clicked_button(){
     this.email.clicked_button()
+    return false;
   }
+
 }
