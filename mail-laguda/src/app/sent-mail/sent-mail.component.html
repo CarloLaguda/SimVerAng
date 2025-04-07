@@ -1,7 +1,13 @@
-<div class="mt-5 border">
+<div class="mt-5 border container">
     <div>
-        <p>{{email.oggetto}} ----  {{email.email}}</p>
-        <button (click) = "clicked_button()">Espandi/Nascondi</button>
+        <div class="row my-2">
+            <div class="col-8">
+                <p>{{email.oggetto}} ----  {{email.email}}</p>
+            </div>
+            <div class="col-4">
+                <button (click) = "clicked_button()" class="btn border btn-warning">Espandi/Nascondi</button>
+            </div>
+        </div>
     </div>
     @if(button_clicked){
         <div>

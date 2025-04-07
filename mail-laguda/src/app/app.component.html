@@ -4,27 +4,27 @@
     </div>
     <div class="col-6">
       <form>
-        <h3>Scrivi una mail</h3>
-        <div>
+        <h3 class="text-center">Scrivi una mail</h3>
+        <div class="container-fluid">
           <label for="email">Email:</label>
           <div>
             <input id="email" name="email" #email>
           </div>
         </div>
-        <div>
+        <div class="container-fluid">
           <label for="oggetto">Oggetto:</label>
           <div>
             <input id="oggetto" name="oggetto" #oggetto>
           </div>
         </div>
-        <div>
+        <div class="container-fluid">
           <label for="testo">Testo:</label>
           <div>
             <input id="testo" name="testo" #testo>
           </div>
         </div>
-        <div>
-          <button (click)="sendEmail(testo, oggetto, email)" class="mt-3">Invia</button>
+        <div class="container-fluid">
+          <button (click)="sendEmail(testo, oggetto, email)" class="mt-3 btn border btn-warning">Invia</button>
         </div>
       </form>
       <div class="mt-5">
