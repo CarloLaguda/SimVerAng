@@ -10,7 +10,7 @@ import { Sentemail } from './sent-mail/sent-email.model';
 })
 export class AppComponent {
   title = 'mail-laguda';
-  mails:Sentemail[];   // <-- component property
+  mails:Sentemail[]; 
   constructor(){
     this.mails = [
       new Sentemail('gig@gmail.com', 'patate', "bablòalaba"),
@@ -20,7 +20,6 @@ export class AppComponent {
   }
 
   sendEmail(testo: HTMLInputElement, oggetto: HTMLInputElement, email: HTMLInputElement){
-    console.log("ciao")
     console.log("Mail " + email.value + " Oggetto " + oggetto.value + " Testo "+ testo.value)
     this.mails.push(new Sentemail(email.value, oggetto.value, testo.value));
     console.log(this.mails)

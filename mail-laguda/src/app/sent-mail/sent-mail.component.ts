@@ -14,7 +14,6 @@ export class SentMailComponent {
   }
 
   clicked_button(){
-    this.button_clicked = !this.button_clicked;
-    
+    this.email.clicked_button()
   }
 }

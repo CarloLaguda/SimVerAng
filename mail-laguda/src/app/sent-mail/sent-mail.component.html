@@ -5,11 +5,11 @@
                 <p>{{email.oggetto}} ----  {{email.email}}</p>
             </div>
             <div class="col-4">
-                <button (click) = "clicked_button()" class="btn border btn-warning">Espandi/Nascondi</button>
+                <button (click) = "clicked_button()" class="btn border btn-warning">{{email.txt_bottone}}</button>
             </div>
         </div>
     </div>
-    @if(button_clicked){
+    @if(email.btn_clk){
         <div>
             <div><p>---------------------------------------------------</p></div>
             <div>{{email.testo}}</div>
