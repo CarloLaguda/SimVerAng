@@ -1,20 +1,30 @@
-<div class="container" >
-  <form class="">
-    <h3>Scrivi una mail</h3>
-    <div>
-      <label for="title" class="form-label">email:</label>
-      <input name="title"  class="form-control">
+<div class="container-fluid" >
+  <div class="row">
+    <div class="col-3">
     </div>
-    <div>
-      <label for="link" class="form-label">oggetto:</label>
-      <input name="link"  class="form-control">
+    <div class="col-6" >
+      <form>
+        <h3>Scrivi una mail</h3>
+        <div>
+          <label for="title" class="form-label">email:</label>
+          <input name="title"  class="form-control">
+        </div>
+        <div>
+          <label for="link" class="form-label">oggetto:</label>
+          <input name="link"  class="form-control">
+        </div>
+        <div>
+          <label for="link" class="form-label">testo:</label>
+          <textarea name="link" class="form-control"></textarea>
+        </div>
+        <div>
+          <button class="mt-3">invia</button>
+        </div>
+      </form>  
+      <div class="mt-5">
+        <app-sent-mail></app-sent-mail>
+      </div>
     </div>
-    <div>
-      <label for="link" class="form-label">testo:</label>
-      <textarea name="link" class="form-control"></textarea>
-    </div>
-    <div>
-      <button class="mt-3">invia</button>
-    </div>
-  </form>  
+    <div class="col-3"></div>  
+  </div>
 </div>
