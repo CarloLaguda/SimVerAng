@@ -8,9 +8,12 @@ import { Sentemail } from './sent-email.model';
 })
 export class SentMailComponent {
   @Input() email:Sentemail;
-
+  button_clicked = true
   constructor(){
     this.email = new Sentemail("", "", "")
   }
 
+  clicked_button(){
+    this.button_clicked = !this.button_clicked;
+  }
 }

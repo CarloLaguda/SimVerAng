@@ -1,9 +1,13 @@
 <div class="mt-5 border">
     <div>
         <p>{{email.oggetto}} ----  {{email.email}}</p>
+        <button (click) = "clicked_button()">Espandi/Nascondi</button>
     </div>
-    <div><p>---------------------------------------------------</p></div>
-    <div>
-        <div>{{email.testo}}</div>
-    </div>
+    @if(button_clicked){
+        <div>
+            <div><p>---------------------------------------------------</p></div>
+            <div>{{email.testo}}</div>
+        </div>
+    }
+    
 </div>
