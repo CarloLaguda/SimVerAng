@@ -1,13 +1,11 @@
 <div class="mt-5 border container">
-    <div>
-        <div class="row my-2">
-            <div class="col-8">
-                <p>{{email.oggetto}} ----  {{email.email}}</p>
-            </div>
-            <div class="col-4">
-                <button (click) = "clicked_button()" class="btn border btn-warning">{{email.txt_bottone}}</button>
-                <!--<button (click)="toggleSpecial()" class="btn border btn-warning">Speciale</button>-->
-            </div>
+    <div class="row my-2">
+        <div class="col-8">
+            <p>{{email.oggetto}} ---- {{email.email}}</p>
+        </div>
+        <div class="col-4">
+            <button (click) = "clicked_button()" class="btn border btn-warning">{{email.txt_bottone}}</button>
+            <button (click) = "toggleSpecial()" class="btn border btn-warning">Speciale</button>
         </div>
     </div>
     @if(email.btn_clk){
@@ -16,5 +14,4 @@
             <div>{{email.testo}}</div>
         </div>
     }
-    
 </div>
