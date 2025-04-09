@@ -3,5 +3,6 @@
 }
 
 .bg-giallo{
-    background-color: rgb(251, 255, 0);
+    background-color: rgb(251, 255, 0) !important;
 }
+

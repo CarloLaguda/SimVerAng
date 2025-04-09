@@ -1,28 +1,26 @@
-import { Component, HostBinding, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit,ElementRef, Renderer2} from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Sentemail } from './sent-email.model';
 @Component({
   selector: 'app-sent-mail',
-  imports: [],
+  imports: [CommonModule ],
   templateUrl: './sent-mail.component.html',
-  styleUrl: './../app.component.css'
+  styleUrl: './sent-mail.component.css'
 })
 export class SentMailComponent implements OnInit {
   @Input() email:Sentemail;
-  @HostBinding('attr.class') cssClass = 'bg-bianco';
+  backgroundColor = 'transparent';
   button_clicked = true
-  constructor(){
+  constructor(private el: ElementRef, private renderer: Renderer2){
     this.email = new Sentemail("", "", "")
   }
-  
+
   toggleSpecial() {
-    if(this.cssClass == "bg-bianco"){
-      this.cssClass = "bg-giallo"
-      console.log("ciaso1")
-    }else{
-      this.cssClass = "bg-bianco"
-      console.log("ciaso2")
+    if (this.backgroundColor === 'transparent') {
+      this.backgroundColor = 'yellow'; // Cambia il colore a giallo
+    } else {
+      this.backgroundColor = 'transparent'; // Torna al colore trasparente
     }
-    return false;
   }
   
   clicked_button(){
