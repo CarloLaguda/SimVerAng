@@ -18,3 +18,9 @@
     </div>
   </div>
 </form>
+
+<div>
+  @for(mail of emails; track mail){
+    <app-sent-mail *ngFor="let mail of emails" [singola_mail]="mail"></app-sent-mail>
+  }
+</div>
