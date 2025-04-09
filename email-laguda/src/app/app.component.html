@@ -1,17 +1,20 @@
 {{title}}
-<form>
+<form id = "form_totale">
   <div>
-    <label>Email</label>
+    <label for="email">Email</label>
     <div>
-      <input type="text" #email>
+      <input id = "email" name="email" autocomplete="email" type="text" #email>
     </div>
-    <label>Oggetto della mail</label>
+    <label for="oggetto">Oggetto della mail</label>
     <div>
-      <input type="text" #oggetto>
+      <input id="oggetto" type="text" #oggetto>
     </div>
-    <label>Testo</label>
+    <label for="testo" >Testo</label>
     <div>
-      <input type="text" #Testo>
+      <input id="testo"type="text" #testo>
+    </div>
+    <div>
+      <button (click) = "aggiungiMail(email, oggetto, testo)">Salva Mail</button>
     </div>
   </div>
 </form>
