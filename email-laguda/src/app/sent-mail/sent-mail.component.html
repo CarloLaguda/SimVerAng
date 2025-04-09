@@ -1,8 +1,13 @@
 <div>
     <div>
-        <p>{{mail.oggetto}} ---- {{mail.email}}</p>
+        <p>{{singola_mail.oggetto}} ---- {{singola_mail.email}}</p>
+        <button (click) = "chiudi_espandi()">{{txt_bottone}}</button>
     </div>
-    <div>
-        <p>{{mail.testo}}</p>
-    </div>
+    
+    @if(buttone_clk){
+        <div>
+            <p>-----------------------------------------------</p>
+            <p>{{singola_mail.testo}}</p>
+        </div>
+    }
 </div>
