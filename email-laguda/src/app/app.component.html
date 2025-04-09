@@ -1,26 +1,34 @@
-{{title}}
-<form id = "form_totale">
-  <div>
-    <label for="email">Email</label>
-    <div>
-      <input id = "email" name="email" autocomplete="email" type="text" #email>
+<div class="container">
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      {{title}}
+      <form id = "form_totale">
+        <div class="mt-5">
+          <label for="email">Email</label>
+          <div class="mt-2">
+            <input id = "email" name="email" autocomplete="email" type="text" #email>
+          </div>
+          <label for="oggetto">Oggetto della mail</label>
+          <div class="mt-2">
+            <input id="oggetto" type="text" #oggetto>
+          </div>
+          <label for="testo" >Testo</label>
+          <div class="mt-2">
+            <input id="testo"type="text" #testo>
+          </div>
+          <div class="mt-2">
+            <button (click) = "aggiungiMail(email, oggetto, testo)" class="btn border">Salva Mail</button>
+          </div>
+        </div>
+      </form>
+    
+      <div class="mt-5">
+        @for(mail of emails; track mail){
+          <app-sent-mail [singola_mail]="mail"></app-sent-mail>
+        }
+      </div>
     </div>
-    <label for="oggetto">Oggetto della mail</label>
-    <div>
-      <input id="oggetto" type="text" #oggetto>
-    </div>
-    <label for="testo" >Testo</label>
-    <div>
-      <input id="testo"type="text" #testo>
-    </div>
-    <div>
-      <button (click) = "aggiungiMail(email, oggetto, testo)">Salva Mail</button>
-    </div>
+    <div class="col-4"></div>
   </div>
-</form>
-
-<div>
-  @for(mail of emails; track mail){
-    <app-sent-mail [singola_mail]="mail"></app-sent-mail>
-  }
 </div>
